@@ -1,0 +1,128 @@
+@use "../../utils" as *;
+/*==============================================
+14. Cta
+================================================*/
+.cta-area {
+	background-size: cover;
+	background-position: center center;
+}
+.cta-text {
+	h2 {
+		color: #fff;
+		font-size: 60px;
+		line-height: 1;
+		font-weight: 300;
+		margin-top: 23px;
+		margin-bottom: 32px;
+		@media #{$md}{
+			color: #fff;
+			margin-bottom: 18px;
+			font-size: 34px;
+		}
+		@media #{$sm}{
+			font-size: 38px;
+		}
+		@media #{$xs}{
+			font-size: 25px;
+		}
+	}
+	p {
+		color: #fff;
+		margin-bottom: 0;
+	}
+}
+.cta-button {
+	margin-top: 76px;
+	@media #{$xs,$sm}{
+		margin-top: 0;
+	}
+	a.btn {
+		background: var(--bd-theme-secondary);
+		padding: 22px 58px;
+		&::before {
+			background: #ef491a;
+			bottom: 0;
+			content: "";
+			left: 0;
+			position: absolute;
+			right: 0;
+			top: 0;
+			transform: scaleY(0);
+			transform-origin: 50% 0 0;
+			transition-duration: 0.3s;
+			transition-property: transform;
+			transition-timing-function: ease-out;
+			z-index: -1;
+			border-radius: 0;
+		}
+		&:hover {
+			&::before {
+				transform: scaley(1);
+			}
+		}
+	}
+}
+.cta2-wrapper {
+	margin-left: 145px;
+	margin-right: 145px;
+	padding: 74px 15px 85px 15px;
+	background-size: cover;
+	background-position: center center;
+	@media #{$lg,$md,$sm,$xs}{
+		margin-left: 0px;
+	    margin-right: 0;
+	}
+}
+.cta2-text {
+	h2 {
+		font-weight: 300;
+		font-size: 60px;
+		line-height: 1.3;
+		margin-bottom: 36px;
+		@media #{$md}{
+			font-size: 50px;
+		}
+		@media #{$sm}{
+			font-size: 34px;
+		}
+		@media #{$xs}{
+			font-size: 25px;
+		}
+	}
+	a.btn {
+		background: #ef491a;
+		padding: 22px 55px;
+		transition: 0.3s;
+	}
+}
+.cta-bg {
+	background-size: cover;
+	background-position: center center;
+	padding-left: 100px;
+	padding-right: 100px;
+	@media #{$md}{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@media #{$xs,$sm}{
+		padding-left: 30px;
+	padding-right: 30px;
+	}
+	.cta-text {
+		p {
+			color: #fff;
+			margin-bottom: 0;
+			padding-right: 10%;
+			@media #{$xs,$sm}{
+				padding-right: 0;
+			}
+		}
+	}
+	.cta-button {
+		a.btn {
+			background: var(--bd-theme-secondary);
+			padding: 22px 54px;
+			transition: 0.3s;
+		}
+	}
+}

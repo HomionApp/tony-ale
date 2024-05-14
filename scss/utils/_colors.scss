@@ -1,0 +1,33 @@
+$colors: (
+  common: (
+    "white": #FFF,
+    "black": #000000,
+    "placeholder": #555555,
+    "selection": #262626,
+  ),
+  theme: (
+    "primary": #408858,
+    "secondary": #fab522,
+  ),
+  heading: (
+    "primary": #0C1020,
+  ),
+  text: (
+    "body": #757F95,
+    "primary": #FFF,
+    "secondary": #0C1020,
+    "paragraph": #757F95,
+  ),
+  bg: (
+    "1": rgba(14, 10, 36, 1),
+  ),
+  border: (
+    "primary": #eaedff,
+    "secondary": #e9e9e9,
+  ),
+);
+
+$white : var(--bd-common-white);;
+$black : #000;
+$theme-primary : #df0e0e;
+$border-secondary : #0c31ac;

@@ -1,0 +1,162 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  3.1 banner Style 1
+/*----------------------------------------*/
+
+.slider-area {
+	position: relative;
+}
+.slider-height {
+	min-height: 950px;
+	@media #{$xl,$lg}{
+		min-height: 800px;
+	}
+	@media #{$md}{
+		min-height: 600px;
+	}
+	@media #{$sm}{
+		min-height: 500px;
+	}
+	@media #{$xs}{
+		min-height: 700px;
+	}
+}
+.slider-height-2 {
+	min-height: 800px;
+	@media #{$md}{
+		min-height: 600px;
+	}
+	@media #{$sm}{
+		min-height: 500px;
+	}
+	@media #{$xs}{
+		min-height: 600px;
+	}
+	.slider-content{
+		@media #{$xs,$sm}{
+			padding-bottom: 20px;
+		}
+	}
+}
+.single-slider {
+	background-size: cover;
+	background-position: center center;
+}
+
+.slider-content {
+	h1 {
+		font-size: 90px;
+		font-weight: 300;
+		margin-bottom: 23px;
+		line-height: 1.1;
+		@media #{$lg}{
+			font-size: 65px;
+		}
+		@media #{$md}{
+			font-size: 54px;
+		}
+		@media #{$sm}{
+			font-size: 40px;
+		}
+		@media #{$xs}{
+			font-size: 36px;
+		}
+	}
+	p {
+		color: #677b8a;
+		font-size: 18px;
+		margin-bottom: 0;
+		padding-right: 47%;
+		@media #{$md}{
+			padding-right: 36%;
+		}
+		@media #{$xs,$sm}{
+			padding-right: 0px;
+		}
+	}
+}
+.slider-button {
+	margin-top: 40px;
+	a.btn.active {
+		background: var(--bd-theme-secondary);
+		margin-left: 25px;
+		color: #fff;
+		@media #{$xs}{
+			margin-left: 0px;
+		}
+	}
+}
+.slider-button a.btn {
+	@media #{$xs,$sm}{
+		margin-left: 0;
+		margin-top: 10px;
+		margin-right: 10px;
+	}
+}
+.slider-content-3 {
+	h1 {
+		color: #fff;
+		font-size: 80px;
+		@media #{$lg}{
+			font-size: 70px;
+		}
+		@media #{$md}{
+			font-size: 54px;
+		}
+		@media #{$xs,$sm}{
+			font-size: 30px;
+		}
+	}
+	p {
+		padding: 0 150px;
+		color: #fff;
+		@media #{$md,$xs,$sm}{
+			padding: 0px;
+		}
+	}
+}
+.slider-active {
+	button.slick-arrow {
+		position: absolute;
+		top: 50%;
+		left: 100px;
+		transform: translateY(-50%);
+		border: 0;
+		font-size: 16px;
+		padding: 0;
+		color: #fff;
+		z-index: 2;
+		opacity: 0;
+		visibility: hidden;
+		height: 70px;
+		width: 70px;
+		border-radius: 50%;
+		cursor: pointer;
+		background: var(--bd-theme-primary);
+		transition: 0.3s;
+		@media #{$lg,$md}{
+			left: 30px;
+		}
+	}
+	button.slick-next {
+		left: auto;
+		right: 78px;
+		@media #{$lg,$md}{
+			left: auto;
+			right: 30px;
+		}
+	}
+	&:hover {
+		button {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	button {
+		&:hover {
+			background: #fff;
+			color: #112433;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.3 Buttons
+/*----------------------------------------*/
+
+.btn {
+	color: #fff;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	padding: 23px 45px;
+	position: relative;
+	text-transform: capitalize;
+	transform: perspective(1px) translateZ(0px);
+	transition: 0.3s;
+	vertical-align: middle;
+	background: var(--bd-theme-primary);
+	border-radius: 0;
+	border: none;
+	&:hover {
+		color: #fff;
+		&::before {
+			transform: scaley(1);
+		}
+	}
+	&::before {
+		background: var(--bd-theme-secondary);
+		bottom: 0;
+		content: "";
+		left: 0;
+		position: absolute;
+		right: 0;
+		top: 0;
+		transform: scaleY(0);
+		transform-origin: 50% 0 0;
+		transition-duration: 0.3s;
+		transition-property: transform;
+		transition-timing-function: ease-out;
+		z-index: -1;
+		border-radius: 0;
+	}
+}
+.breadcrumb {
+	>.active {
+		color: #888;
+	}
+}

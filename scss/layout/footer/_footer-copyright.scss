@@ -1,0 +1,63 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  6.6 Copyright Style 1
+/*----------------------------------------*/
+
+
+.footer-bottom-area {
+	border-top: 1px solid #357e4e;
+	padding: 21px 0;
+	@media #{$sm,$xs}{
+		text-align: center;
+	}
+}
+.copyright {
+	p {
+		color: #a0d1b0;
+		font-size: 14px;
+		margin-bottom: 0;
+		a {
+			color: var(--bd-theme-secondary);
+		}
+	}
+}
+.footer-bottom {
+	border-top: 1px solid #dfe4ea;
+	padding: 21px 0;
+	.copyright {
+		@media #{$xs,$sm}{
+			margin-bottom: 20px;
+		}
+		p {
+			color: #5b646b;
+			font-size: 14px;
+			margin-bottom: 0;
+			a {
+				color: var(--bd-theme-secondary);
+			}
+		}
+	}
+	.footer-icon {
+		margin-top: 0;
+		a {
+			color: #fff;
+			font-size: 13px;
+			height: 36px;
+			width: 36px;
+			display: inline-block;
+			background: #7b8e9d;
+			border-radius: 50%;
+			line-height: 36px;
+			text-align: center;
+			transition: 0.3s;
+			margin-right: 6px;
+			&:hover {
+				background: #ef491a;
+			}
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

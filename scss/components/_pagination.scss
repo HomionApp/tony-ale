@@ -1,0 +1,49 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.4 Pagination
+/*----------------------------------------*/
+
+.paginations {
+	ul {
+		li {
+			display: inline-block;
+			padding: 0 3px;
+		}
+	}
+}
+.paginations {
+	ul {
+		li {
+			a {
+				background: #f4f7fc;
+				color: #7b8e9d;
+				display: table-cell;
+				font-size: 14px;
+				font-weight: 400;
+				height: 40px;
+				transition: all 0.3s ease 0s;
+				vertical-align: middle;
+				width: 40px;
+				text-align: center;
+				border-radius: 50%;
+			}
+		}
+	}
+}
+.paginations {
+	ul {
+		li{
+			&:hover {
+				a {
+					background: var(--bd-theme-primary);
+					color:#fff;
+				  }
+			}
+		}
+	}
+}
+.paginations ul li.active a {
+  background: var(--bd-theme-primary);
+  color:#fff;
+}

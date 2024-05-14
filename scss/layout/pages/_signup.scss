@@ -1,0 +1,129 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  9.11 Signup css
+/*----------------------------------------*/
+.signup-area.pt-120.pb-120{
+	@media #{$md,$sm,$xs}{
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+}
+.signup-main-wrapper{
+	max-width: 540px;
+	margin-right: auto !important;
+    margin-left: auto !important;
+	.signup-wrapper{
+		box-shadow: 0 30px 60px rgba(3,4,28,.1);
+		padding: 45px 40px;
+		text-align: center;
+		border-radius: 3px;
+		@media #{$xs,$sm}{
+			padding: 40px 25px;
+		}
+		p{
+			font-size: 18px;
+			margin-bottom: 35px;
+		}
+	}
+}
+.signup-title.mb-35{
+	margin-bottom: 35px;
+}
+.signup-title{
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 1.3;
+	color: #000;
+	margin-bottom: 10px;
+}
+.signin_icon{
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	align-items: center;
+	a{
+		font-size: 20px;
+		color: $black;
+		margin-right: 8px;
+		transition: 0.3s;
+		height: 50px;
+		width: 50px;
+		display: inline-block;
+		border: 2px solid var(--bd-border-secondary);
+		text-align: center;
+		line-height: 45px;
+		border-radius: 5px;
+		display: block;
+		&:hover{
+			color: var(--bd-common-white);
+			background: var(--bd-theme-primary);
+			border-color: var(--bd-theme-primary);
+		}
+	}
+}
+.signup-btn{
+	.fill_btn{
+		font-size: 16px;
+		color: var(--bd-common-white);
+		font-weight: 500;
+		background:  var(--bd-theme-primary);
+		padding: 0px 32px;
+		height: 60px;
+		width: 100%;
+		border-radius: 3px;
+		border: 0;
+		transition: .3s;
+		@media #{$xs,$sm}{
+			height: 50px;
+		}
+		&:hover{
+			background: var(--bd-theme-secondary);
+			color: var(--bd-common-white);
+		}
+	}
+}
+.ms-divided-btn {
+	text-align: center;
+	position: relative;
+	&::before{
+		position: absolute;
+		content: "";
+		width: 100%;
+		height: 1px;
+		background: var(--bd-border-secondary);
+		inset-inline-start: 0;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	span{
+		background: #fff;
+		padding: 0 20px;
+		position: relative;
+		color: $black;
+		font-weight: 600;
+		text-transform: capitalize;
+	}
+  }
+.single-input{
+	input{
+		height: 60px;
+		width: 100%;
+		border: 1px solid #e9e9e9;
+		margin-bottom: 20px;
+		padding: 0 15px;
+		color: #7b8e9d;
+		font-size: 14px;
+		transition: 0.3s;
+		background: #fff;
+		font-weight: 400;
+		&::-moz-placeholder {
+			color: #7b8e9d;
+			font-size: 14px;
+		}
+		&::placeholder {
+			color: #7b8e9d;
+			font-size: 14px;
+		}
+	}
+}
