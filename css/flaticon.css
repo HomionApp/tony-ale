@@ -116,6 +116,7 @@
 
 	.flaticon-diet:before {
 	    content: "\f116";
+		font-family: 'Flaticon';
 	}
 
 	.flaticon-tomato:before {
