@@ -880,7 +880,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     position: absolute;
     top: 8px;
     font-weight: 600;
-    font-family: "Font Awesome 6 Pro";
+    font-family: 'Font Awesome 5 Free';
 }
 
 @media (max-width: 575px),
@@ -3973,7 +3973,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     padding-left: 9px;
     transition: 0.3s;
     position: relative;
-    top: 2px;
+    /* top: 2px; */
 }
 
 .section-img {
@@ -4850,7 +4850,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     right: 40px;
     top: 21px;
     margin: auto;
-    font-family: "Font Awesome 6 Pro";
+    font-family: 'Font Awesome 5 Free';
     color: #010e2a;
     font-size: 13px;
     font-weight: 700;
@@ -4922,7 +4922,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     right: 40px;
     top: 21px;
     margin: auto;
-    font-family: "Font Awesome 6 Pro";
+    font-family: 'Font Awesome 5 Free';
     color: #010e2a;
     font-size: 13px;
     font-weight: 700;

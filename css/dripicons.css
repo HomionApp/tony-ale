@@ -22,7 +22,7 @@
 
 [class^="dripicons-"]:before,
 [class*=" dripicons-"]:before {
-    font-family: "dripicons-v2" !important;
+    /* font-family: "dripicons-v2" !important; */
     font-style: normal !important;
     font-weight: normal !important;
     font-variant: normal !important;
@@ -78,11 +78,11 @@
 }
 
 .dripicons-arrow-thin-left:before {
-    content: "\6c";
+    content: "\2190";
 }
 
 .dripicons-arrow-thin-right:before {
-    content: "\6d";
+    content: "\2192";
 }
 
 .dripicons-arrow-thin-up:before {
