@@ -1122,8 +1122,8 @@ only screen and (min-width: 576px) and (max-width: 767px) {
 /*----------------------------------------*/
 
 .retina-logo {
-    display: none;
-    width: 156px;
+    /* display: none; */
+    width: 84px;
 }
 
 .header-transparent {

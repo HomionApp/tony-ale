@@ -8,7 +8,7 @@
 }
 
 [data-icon]:before {
-    font-family: "dripicons-v2" !important;
+    /* font-family: "dripicons-v2" !important; */
     content: attr(data-icon);
     font-style: normal !important;
     font-weight: normal !important;
