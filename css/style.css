@@ -3314,7 +3314,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     font-size: 14px;
 }
 
-.subscribes-form form button.btn {
+.subscribes-form form input.btn {
     margin-top: 10px;
     position: relative;
     background: var(--bd-theme-secondary);
@@ -3323,11 +3323,11 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     padding: 12px 40px;
 }
 
-.subscribes-form form button.btn:hover::before {
+.subscribes-form form input.btn:hover::before {
     transform: scaley(1);
 }
 
-.subscribes-form form button.btn::before {
+.subscribes-form form input.btn::before {
     background: #ef491a;
     bottom: 0;
     content: "";
@@ -3437,7 +3437,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     font-size: 14px;
 }
 
-.single-footer .subscribes-form form button.btn {
+.single-footer .subscribes-form form input.btn {
     margin-top: 10px;
     position: relative;
     background: #ef491a;
@@ -3446,11 +3446,11 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     padding: 12px 40px;
 }
 
-.single-footer .subscribes-form form button.btn:hover::before {
+.single-footer .subscribes-form form input.btn:hover::before {
     transform: scaley(1);
 }
 
-.single-footer .subscribes-form form button.btn::before {
+.single-footer .subscribes-form form input.btn::before {
     background: var(--bd-theme-secondary);
     bottom: 0;
     content: "";
@@ -3813,6 +3813,7 @@ only screen and (min-width: 576px) and (max-width: 767px) {
     padding: 60px 35px 53px 35px;
     position: relative;
     transition: 0.3s;
+    height: 90%;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
