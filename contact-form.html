@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Form in iframe</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contact-area">
+        <div class="container">
+            <div class="contact-bg pt-90 pb-70" style="background-image:url(img/bg/bg18.jpg)">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="contact-title text-center mb-35">
+                            <h2>Leave a Message</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="contact-wrapper mb-30">
+                            <form id="contact-us-form" onsubmit="sendEmail(event)">
+                                <div class="row">
+                                    <div class="col-xl-6 col-lg-6">
+                                        <input id="name" name="name" placeholder="Name :" type="text">
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6">
+                                        <input id="email" name="email" placeholder="Email :" type="email">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <input id="contact" name="contact" placeholder="contact :" type="text">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <input id="subject" name="subject" placeholder="subject :" type="text">
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <textarea id="message" name="message" cols="30" rows="10"
+                                            placeholder="Write your comments :"></textarea>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12">
+                                        <div class="contact-button text-center">
+                                            <button id="sendMessage" class="btn" type="submit">Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="ajax-response"></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function sendEmail(event) {
+
+            const googleAppsScriptUrl = 'https://script.google.com/macros/s/AKfycbwV5XWSCxqyzfDGjUFjJd0FLGV-LDvmu3UXTRI3Rqo/dev';
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const subject = document.getElementById("subject").value;
+            const contact = document.getElementById("contact").value;
+            const message = document.getElementById("message").value;
+
+            const formData = new FormData();
+
+            formData.append('name', name);
+            formData.append('email', email);
+            formData.append('contact', contact);
+            formData.append('subject', subject);
+            formData.append('message', message);
+
+            fetch(googleAppsScriptUrl, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Email sent successfully!');
+                    } else {
+                        throw new Error('Failed to send email.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+        }
+    </script>
+</body>
+
+</html>
